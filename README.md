@@ -47,7 +47,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/online-voting-system.git
+   git clone https://github.com/AminNeji/online-voting-system.git
    cd online-voting-system
    ```
 
@@ -61,7 +61,7 @@ Before you begin, ensure you have the following installed:
    ```
 
 3. **Configure Database Connection**:
-   - Update the database connection details in the `DBConnection.java` file.
+   - Update the database connection details in the file that uses the DataBase.
    ```java
    // Example configuration
    private static final String URL = "jdbc:mysql://localhost:3306/voting_system";
@@ -89,7 +89,7 @@ Before you begin, ensure you have the following installed:
 
 - **Dashboard**: View and manage elections, candidates, and users.
 - **Add/Edit/Delete**: Create new elections, add candidates, and manage user data.
-- **Statistics**: Real-time display of voting statistics and results.
+- **Statistics**: Real-time display of voting statistics and results ( not done yet ).
 
 ## Contributing
 
@@ -117,4 +117,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgments
 
 - Thanks to all contributors and collaborators for their valuable input and suggestions.
-- Special thanks to [Your Name](https://github.com/yourusername) for initiating this project.
