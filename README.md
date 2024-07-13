@@ -70,7 +70,7 @@ Before you begin, ensure you have the following installed:
    - Update the database connection details in the file that uses the DataBase.
    ```java
    // Example configuration
-   private static final String URL = "jdbc:mysql://localhost:3306/voting_system";
+   private static final String URL = "jdbc:mysql://localhost:3306/ovs";
    private static final String USER = "root";
    private static final String PASSWORD = "yourpassword";
    ```
