@@ -56,12 +56,12 @@ Before you begin, ensure you have the following installed:
 2.1. **Create a Database**:
    - Create a database named `ovs`.
    - Import the provided SQL script to set up the necessary tables and data.
-   For the complete SQL setup script, please refer to [sql/setup.sql](path/to/sql/setup.sql).
+   For the complete SQL setup script, please refer to [sql/setup.sql](Online-voting-system/Online_Voting_System/ovs.sql).
 
 2.2**Import SQL Script**:
    - Using phpMyAdmin:
      - Open phpMyAdmin and connect to your database.
-     - Select the `voting_system` database.
+     - Select the `ovs` database.
      - Click on the `Import` tab.
      - Choose the SQL file (`sql/setup.sql`) from your computer.
      - Click on `Go` to start the import process.
