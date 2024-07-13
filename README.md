@@ -99,13 +99,13 @@ Before you begin, ensure you have the following installed:
 
   ## Project Screenshots
 
-![Login Screen](path/to/login_screen.png)
+![Login Screen](Online_Voting_System/src/icons/userlogin.png)
 *Login Screen*
 
-![Admin Dashboard](path/to/admin_dashboard.png)
+![Admin Dashboard](Online_Voting_System/src/icons/admindinterface.png)
 *Admin Dashboard*
 
-![User Dashboard](path/to/voting_interface.png)
+![User Dashboard](Online_Voting_System/src/icons/userinterface.png)
 *User Interface*
 
 
