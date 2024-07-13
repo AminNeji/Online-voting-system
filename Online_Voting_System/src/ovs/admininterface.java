@@ -106,7 +106,7 @@ public class admininterface extends JFrame {
 
 	    @Override
 	    public boolean isCellEditable(int row, int column) {
-	        return false; // Makes all cells non-editable
+	        return false; 
 	    }
 	}
 
@@ -345,7 +345,7 @@ public class admininterface extends JFrame {
 				Connect();
 				int selectedRow = table.getSelectedRow();
 		        if (selectedRow != -1) {
-		            int eid = (int) table.getValueAt(selectedRow, 0); // Assuming ID is in column 0
+		            int eid = (int) table.getValueAt(selectedRow, 0);
 
 		            String ename = enamef.getText();
 		            String eloc = elocf.getText();
@@ -587,7 +587,7 @@ public class admininterface extends JFrame {
 				Connect();
 				int selectedRow = table.getSelectedRow();
 		        if (selectedRow != -1) {
-		            electionid = (int) table.getValueAt(selectedRow, 0); // Assuming ID is in column 0
+		            electionid = (int) table.getValueAt(selectedRow, 0); 
 
 		            int candid = Integer.parseInt(canid.getText());
 		            int candcin = Integer.parseInt(cancin.getText());
@@ -765,7 +765,6 @@ public class admininterface extends JFrame {
 			            } catch (SQLException e1) {
 			                e1.printStackTrace();
 			            } finally {
-			                // Ensure PreparedStatement and Connection are closed
 			                try {
 			                    if (pst != null) pst.close();
 			                    if (con != null) con.close();
@@ -846,8 +845,8 @@ public class admininterface extends JFrame {
                     LocalDate endLocalDate = endDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
                     datePicker.setDate(startLocalDate);
                     dateendf.setDate(endLocalDate);
-	                datePicker.setDate(startLocalDate); // Set LocalDate in DatePicker
-	                dateendf.setDate(endLocalDate); // Set LocalDate in DatePicker
+	                datePicker.setDate(startLocalDate);
+	                dateendf.setDate(endLocalDate);
 	            } catch (ParseException ex) {
 	                ex.printStackTrace();
 	            }
@@ -876,7 +875,7 @@ public class admininterface extends JFrame {
 				DefaultTableModel model = (DefaultTableModel) table.getModel();
 			    model.setRowCount(0);
 			    while(res.next()) {
-			    	Object[] rows = new Object[5]; // Initialize the array inside the loop
+			    	Object[] rows = new Object[5];
 
 			        rows[0] = res.getInt("id");
 			        rows[1] = res.getString("name");
@@ -907,7 +906,7 @@ public class admininterface extends JFrame {
 				DefaultTableModel modelm = (DefaultTableModel) tablem.getModel();
 			    modelm.setRowCount(0);
 			    while(res1.next()) {
-			    	Object[] rows = new Object[5]; // Initialize the array inside the loop
+			    	Object[] rows = new Object[5];
 
 			        rows[0] = res1.getInt("id");
 			        rows[1] = res1.getString("cin");
