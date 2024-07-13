@@ -256,7 +256,6 @@ public class userinterface extends JFrame {
 			            } catch (SQLException e1) {
 			                e1.printStackTrace();
 			            } finally {
-			                // Ensure PreparedStatement and Connection are closed
 			                try {
 			                    if (pst != null) pst.close();
 			                    if (con != null) con.close();
@@ -391,7 +390,7 @@ public class userinterface extends JFrame {
 					    table.getColumn("Action").setCellEditor(
 					        new ButtonEditor(new JCheckBox()));
 					    while (res.next()) {
-					        Object[] rows = new Object[7]; // Initialize the array inside the loop
+					        Object[] rows = new Object[7]; 
 
 					        rows[0] = res.getInt("id");
 					        rows[1] = res.getString("name");
@@ -409,16 +408,15 @@ public class userinterface extends JFrame {
 					        rows[6] = "Vote Now";
 					        model.addRow(rows);
 
-					        // Close the inner ResultSet and PreparedStatement
 					        res2.close();
 					        pst2.close();
 					    }
 
-					    // Close the outer ResultSet and PreparedStatement
+					  
 					    res.close();
 					    pst.close();
 
-					    // Close the connection after processing all results
+					   
 					    con.close();
 					} catch (Exception e5) {
 					    e5.printStackTrace();
@@ -460,7 +458,7 @@ public class userinterface extends JFrame {
 		                modelvote.setRowCount(0);
 					    
 
-		                // Populate the table model
+		              
 		                while (rs.next()) {
 		                    int cin1 = rs.getInt("cin");
 		                    String userName = rs.getString("user_name");
@@ -470,11 +468,11 @@ public class userinterface extends JFrame {
 		                    String candidateName = rs.getString("candidate_name");
 		                    String candidateLastName = rs.getString("candidate_lastname");
 		                    Object[] row = {cin1, userName, electionId, electionName, endDate, candidateName, candidateLastName};
-		                    System.out.println("Row Data: " + Arrays.toString(row)); // Debugging print statement
+		                    System.out.println("Row Data: " + Arrays.toString(row)); 
 		                    modelvote.addRow(row);
 		                }
 		                if (modelvote.getRowCount() == 0) {
-		                    System.out.println("No data found for CIN: " + cin); // Debugging print statement
+		                    System.out.println("No data found for CIN: " + cin); 
 		                }
 		            } catch (SQLException e3) {
 		                e3.printStackTrace();
