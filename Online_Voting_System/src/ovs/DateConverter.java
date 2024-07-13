@@ -6,8 +6,6 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 
 public class DateConverter {
-
-    // Convert java.sql.Date to LocalDate
     public static LocalDate sqlDateToLocalDate(java.util.Date date) {
         if (date != null) {
             Instant instant = Instant.ofEpochMilli(date.getTime());
@@ -15,8 +13,6 @@ public class DateConverter {
         }
         return null;
     }
-
-    // Convert LocalDate to java.sql.Date
     public static Date localDateToSqlDate(LocalDate localDate) {
         if (localDate != null) {
             Instant instant = localDate.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
