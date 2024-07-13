@@ -65,8 +65,8 @@ public class splash extends JFrame {
         progressBar = new JProgressBar();
         progressBar.setBounds(126, 236, 413, 33);
         progressBar.setStringPainted(true);
-        progressBar.setForeground(Color.RED); // Set progress bar color to red
-        progressBar.setUI(new RedProgressBarUI()); // Use custom UI to paint text in red
+        progressBar.setForeground(Color.RED);
+        progressBar.setUI(new RedProgressBarUI()); 
         panel.add(progressBar);
 
         JLabel lblNewLabel_1 = new JLabel("");
@@ -81,7 +81,7 @@ public class splash extends JFrame {
             public void run() {
                 try {
                     for (int i = 0; i <= 100; i++) {
-                        Thread.sleep(50); // Simulate loading time
+                        Thread.sleep(50);
                         final int progress = i;
                         EventQueue.invokeLater(new Runnable() {
                             public void run() {
@@ -101,9 +101,9 @@ public class splash extends JFrame {
 
     public void updateProgress(int value) {
         if (progressBar != null) {
-            progressBar.setValue(value); // Update progress bar value
+            progressBar.setValue(value);
         } else {
-            System.out.println("Progress bar is null!"); // Optional: Debug message
+            System.out.println("Progress bar is null!"); 
         }
     }
 
