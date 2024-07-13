@@ -24,7 +24,7 @@ Welcome to the **Online Voting System** project! This application is designed to
 - **Admin Dashboard**: Manage elections, candidates, and view real-time voting statistics.
 - **Voting Interface**: Simple and intuitive voting process for users.
 - **Database Connectivity**: Uses JDBC for robust database interactions.
-- **Face Detection**: Integrated face detection for admin login security.
+- **Face Detection**: Integrated face detection for admin login security(not done yet).
 
 ## Technologies Used
 
@@ -51,14 +51,20 @@ Before you begin, ensure you have the following installed:
    cd online-voting-system
    ```
 
-2. **Set Up the Database**:
-   - Create a database named `voting_system`.
-   - Import the provided SQL script to set up the necessary tables.
-   ```sql
-   CREATE DATABASE voting_system;
-   USE voting_system;
-   -- Include the rest of your SQL setup script here
-   ```
+2. ### Set Up the Database
+
+2.1. **Create a Database**:
+   - Create a database named `ovs`.
+   - Import the provided SQL script to set up the necessary tables and data.
+   For the complete SQL setup script, please refer to [sql/setup.sql](path/to/sql/setup.sql).
+
+2.2**Import SQL Script**:
+   - Using phpMyAdmin:
+     - Open phpMyAdmin and connect to your database.
+     - Select the `voting_system` database.
+     - Click on the `Import` tab.
+     - Choose the SQL file (`sql/setup.sql`) from your computer.
+     - Click on `Go` to start the import process.
 
 3. **Configure Database Connection**:
    - Update the database connection details in the file that uses the DataBase.
@@ -90,6 +96,18 @@ Before you begin, ensure you have the following installed:
 - **Dashboard**: View and manage elections, candidates, and users.
 - **Add/Edit/Delete**: Create new elections, add candidates, and manage user data.
 - **Statistics**: Real-time display of voting statistics and results ( not done yet ).
+
+  ## Project Screenshots
+
+![Login Screen](path/to/login_screen.png)
+*Login Screen*
+
+![Admin Dashboard](path/to/admin_dashboard.png)
+*Admin Dashboard*
+
+![User Dashboard](path/to/voting_interface.png)
+*User Interface*
+
 
 ## Contributing
 
